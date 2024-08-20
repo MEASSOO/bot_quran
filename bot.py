@@ -9,6 +9,10 @@ logging.basicConfig(
 )
 
 
+def app(environ, start_response):
+    start_response('200 OK', [('Content-type, 'text/plain')])
+    return [b"Hello , this bot"]
+
 async def start(update:Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text="test")
     
