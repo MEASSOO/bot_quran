@@ -10,7 +10,7 @@ logging.basicConfig(
 
 
 def app(environ, start_response):
-    start_response('200 OK', [('Content-type, 'text/plain')])
+    start_response('200 OK', [('Content-type', 'text/plain')])
     return [b"Hello , this bot"]
 
 async def start(update:Update, context: ContextTypes.DEFAULT_TYPE):
